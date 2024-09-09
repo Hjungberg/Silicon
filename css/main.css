@@ -31,6 +31,12 @@ body {
   
 }
 
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
 .container {
   width: 100%;
   padding-left: var(--container-padding);
@@ -177,6 +183,30 @@ header .container {
   gap: 1.5rem;
 }
 
+footer { 
+  font-size: 14px;
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+   color: var(--color-gray);
+  
+   .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+
+  }
+  
+  .credit {
+    display: none;
+  }
+}
+
+
+
+
+
+
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
@@ -188,6 +218,12 @@ header .container {
   head .container {
     gap: 3rem;
   }
+  footer {
+    .credit {
+      display: block;
+    }
+  }
+  
 }
 
 @media (min-width: 1400px) {
